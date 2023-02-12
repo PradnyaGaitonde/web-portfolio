@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- linking css file -->
+  <style>
+    .bgimage {
+    height:100vh;
+    background-image:url(https://images.ctfassets.net/9jm3t1lrj5m2/21ObFTtXrycFTERT8THXgc/deff5fe77d474047b4dca0b8278282ee/iStock-1390650720.jpg);
+    background-size:cover;
+    position:relative;
+}
+/* text css above hero image*/
+.hero_title {
+    font-size: 4.5rem;
+}
+.hero_desc {
+    font-size: 2rem;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+/* about section image css */
+.imageAboutPage {
+    width: 55%;
+}
+/* social media icons styling */
+.social-icons {
+    font-size: 36px;
+    cursor: pointer;
+}
+.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
+    color: #008000;
+}
+.fab {
+    color: #000000;
+}
+/* footer styling */
+#footer {
+    background-color: #808080;
+    text-align: center;
+}
+/* spacing on all sections */
+#about, #services, #portfolio, #contact, #skills{
+    margin-top: 4rem;
+    padding-top: 4rem;
+}
+#contact {
+    padding-bottom: 4rem;
+}
+.ex-me{
+  margin-top: 35px;
+}
+
+.details{
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.bar{
+    position: relative;
+
+    border: 2px solid #0d96e0;
+
+    border-radius: 20px;
+
+}
+.bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background-color: #0d96e0;
+}
+#html-bar{
+    animation: html-fill 2s forwards;
+}
+@keyframes html-fill{
+    100%{
+        width: 90%;
+    }
+}
+#css-bar{
+    animation: css-fill 2s forwards;
+}
+@keyframes css-fill{
+    100%{
+        width: 75%;
+    }
+}
+#javascript-bar{
+    animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+    100%{
+        width: 72%;
+    }
+}
+#jQuery-bar{
+    animation: jQuery-fill 2s forwards;
+}
+@keyframes jQuery-fill{
+    100%{
+        width: 58%;
+    }
+} 
+.skills:not(:last-child){
+    margin-bottom: 30px;
+}
+.skills{
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+  </style>
+  
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top navbarScroll">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#qualifications">Qualifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <section class="bgimage" id="home">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+                <h2 class="hero_title">Hi, This is Pradnya Gaitonde</h2>
+                <p class="hero_desc">I am a Software Developer</p>
+            </div>
+            </div>
+    </section>
+  <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
+                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-3 pb-4 pb-lg-0">
+                    <img class="img-fluid rounded w-100" src="https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=e2e541b767&attid=0.1&permmsgid=msg-a:r7277960631799511741&th=1863c5bbfac0e5de&view=att&disp=safe&realattid=1863c5ba71740b0a37c1&saddbat=ANGjdJ_u7qkl7r214C-9_0rcW5pTXZir4uEXMZI6Pa1TcM8T23yooeJrXksQ-BcF67ztEE61uNPazmHjTh_D3vtbY3hILmWS84sFGqvBPIOpo4Sh06PvJqvxB74ENIjxkTLZMTci-gXRrijwiL9dpAPXkziQCSHM1G2SFCTbtA0L9nek_LPediRr-FgVkwr8CZpuGVq6PYkL-Lnql3OVPoqiyLoLfWaCGLHfLkgewUN1Ydyw6UfejwTg4whU726YEXloXJHy4TW2hUzbNV1jJZ7OpIz0RHimG04_eFTqpZkYZVIsu_Gq4DjueOWiZucsEX9PkoAhn8CC-NtM8mo7QnWO1EtlvmX-FVGWOFW2vyNtxb6Y5AwP44YZ8ztr7-8P5UXyk4kliu6JFkjJdJXzrQvqTr2YCW9lPMbjG60-lvsDOWXsiURyZQ3ZsKrwYw9kbFwOjSdrSuBYUNz1FQBacHfr1kMpMljqxAtKIUTTQ_v3fxvzhGCKBz9_d8Pyzmq-XAQO1xDkai2oKUrj8t8V_0qrXB4c0YRu32FNmzsyWYRjind0e-WfKF9XSMwltxPq__4dw2lTY_ieM0zDuX0jBZrPPpsZ1tVhYSmid6D2PYCl7ouJ7BsZlXJFcB_zS1M3RP33G7Rp_4ymBhQr0XDgECySuDqdzK880y5LYkHDaC9MOx_Ek_bDoTagWYYji_y-Fkcvsay6gXLp-XpGPEKKvr2snh3M4yRAik1cKIkevhjQQR5fVRVJ3zU2kkR8yvgmzgduCQ3fsnbhwS9AN8yqDRvreNwTQInzY8htFVawZgnkWFINTJOHN__GnOxTiD7VxC2s0WNi_X9g_anp69TJv5hYDaGtSQBBI9cnQ361qfSUEaNsMGcacQVhy6coqENUGzo5rIBIoVdaHwukzCSTKQEgBFgcwb1BsEUTJk7aHmDo9-NHAYmJa-_Avl9dwA2-XRr_c0uQjOnp3JWuA3ZiwspsZ-L65s553yODt7htLddSAAFnszthuhKHfE-t0nA" alt="">
+                </div>
+                <div class="col-lg-9">
+                    <h3 class="mb-4">Software Developer</h3>
+                    <p>My name is Pradnya Gaitonde and I have the required knowledge and interest in computer systems and latest technologies. I have the ability to learn new technologies quickly and also possess the ability to communicate complex procedures to other colleagues. Some of my other qualities are the attention to detail and desire to probe furthur into data, an analytical mind as well as commercial and business awareness.</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Pradnya Gaitonde</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">8 September 2003</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary">B.Tech in Computer Science</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">9113541180</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">pradnya7886@gmail.com</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">Belgaum, Karnataka</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div>
+                    </div>
+                    <a href="" class="btn blue btn-outline-primary mr-4">Hire Me</a>
+                    <a href="" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  <!-- Qualification Start -->
+  <section class="qualifications" id="qualifications">
+    <div class="container-fluid py-5" id="qualification">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Qualifications</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Education</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative ex-me mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px; font-size: 22px;"></i>
+                            <h5 class="font-weight-bold mb-1">Bachelors in Engineering, Computer Science</h5>
+                            <p class="mb-2"><strong>Gogte Institute of Technology</strong> | <small>2021 - 2025</small></p>
+                            <p>CGPA: 8.2</p>
+                        </div>
+                        <div class="position-relative ex-me mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px;  font-size: 22px;"></i>
+                            <h5 class="font-weight-bold mb-1">Pre-University Course, Science</h5>
+                            <p class="mb-2"><strong>Raja Lakhamagouda Science Institute</strong> | <small>2019 - 2021</small></p>
+                            <p>Pre-University Course(PCMB)<br>
+                               Percentage: 93.4%
+                            </p>
+                        </div>
+                        <div class="position-relative ex-me mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px;  font-size: 22px;"></i>
+                            <h5 class="font-weight-bold mb-1">Schooling</h5>
+                            <p class="mb-2"><strong>KLES' International School</strong> | <small>2009 - 2019</small></p>
+                            <p>CBSE<br>
+                               Percentage: 90%
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Services</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative ex-me mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px;left: -35px;  font-size: 22px;"></i>
+                            <h5 class="font-weight-bold mb-1">Web Development</h5>
+                            <p class="mb-2"><small> Excellent</small></p>
+                            <p>Creating the design and layout of a website or web pages using HTML, Cascading Style Sheets, Javascript as well as Bootstrap.</p>
+                        </div>
+                        <div class="position-relative ex-me mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px;left: -35px;  font-size: 22px;"></i>
+                            <h5 class="font-weight-bold mb-1">Programming</h5>
+                            <p class="mb-2"><small>Excellent</small></p>
+                            <p>Proficiency in coding languages like C, C++, Java.</p>
+                        </div>
+                        <div class="position-relative ex-me mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px;left: -35px;  font-size: 22px;"></i>
+                            <h5 class="font-weight-bold mb-1">Cybersecurity</h5>
+                            <p class="mb-2"><small> Good</small></p>
+                            <p>Provide an essential service to organizations by looking for vulnerabilities that can lead to security breach.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- Qualification End -->
+  <!-- Skill Start -->
+  <section class="skills" id="skills">
+    <div class="container-fluid py-5" id="skill">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+            </div>
+          </div>
+        </div>
+        <div class="skills">
+   <div class="details">
+     <span>HTML</span>
+     <span>95%</span>
+   </div>
+   <div class="bar">
+      <div id="html-bar"></div>
+   </div>
+ </div>
+ <div class="skills">
+   <div class="details">
+     <span>CSS</span>
+     <span>75%</span>
+   </div>
+   <div class="bar">
+      <div id="css-bar"></div>
+   </div>
+ </div>
+
+ <div class="skills">
+   <div class="details">
+     <span>Java</span>
+     <span>72%</span>
+   </div>
+   <div class="bar">
+      <div id="javascript-bar"></div>
+   </div>
+ </div>
+
+ <div class="skills">
+   <div class="details">
+     <span>C++</span>
+     <span>68%</span>
+   </div>
+   <div class="bar">
+      <div id="jQuery-bar"></div>
+   </div>
+ </div>
+      </section>
+    <!-- portfolio section-->
+    <section class ="portfolio" id="portfolio">
+        <div class="container mt-3">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Certifications</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Certifications</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://imageio.forbes.com/specials-images/imageserve/61b6d5fd475a71fdc7dda795/0x0.jpg?format=jpg&width=1200" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Internet Of Things</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="https://miro.medium.com/max/1400/1*cG6U1qstYDijh9bPL42e-Q.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Machine Learning</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="https://assets.entrepreneur.com/content/3x2/2000/1663768545-Ent-2023CyberSecurity.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Ethical Hacking</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="https://newschoolarch.edu/wp-content/uploads/2019/01/How-to-Become-a-Product-Designer.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Product Design & Development</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="https://149695847.v2.pressablecdn.com/wp-content/uploads/2019/01/matlab-tutorials-feature_1290x688_ms-940x501-1.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Matlab Fundamentals</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- contact section-->
+    <section class="contact" id="contact">
+        <div class="container mt-3 contactContent">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Contact</h1>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-lg-6">
+                    <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+                    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;"><div id="embed-ded-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Belgaum,+Karnataka,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="google-map-html" href="https://www.bootstrapskins.com/themes" id="make-map-infor-mation">premium bootstrap themes</a><style>#embed-ded-map-canvas img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- form fields -->
+                    <form>
+                        <input type="text" class="form-control form-control-lg" placeholder="Name">
+                        <input type="email" class="form-control mt-3" placeholder="Email">
+                        <input type="text" class="form-control mt-3" placeholder="Subject">
+                        <div class="mb-3 mt-3">
+                            <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-success mt-3">Contact Me</button>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-1 px-sm-1 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="#">Privacy</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Terms</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">FAQs</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Help</a>
+            </div>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Copyright</a>. All Rights Reserved. Designed by <a class="text-white font-weight-bold" href="#">Pradnya Gaitonde</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- load javascript after loading all html content -->
+    <script src="script/script.js"></script>
+</body>
+</html>
